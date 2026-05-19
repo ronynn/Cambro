@@ -20,4 +20,5 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
 }
