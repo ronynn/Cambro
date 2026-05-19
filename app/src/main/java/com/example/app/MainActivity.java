@@ -2,11 +2,11 @@ package com.example.app;
 import android.Manifest;
 import android.hardware.Camera;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 import jp.co.cyberagent.android.gpuimage.GPUImageView;
 import jp.co.cyberagent.android.gpuimage.filter.GPUImageFilter;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     GPUImageView v; Camera c; int i=0;
     String gb="precision lowp float;varying vec2 textureCoordinate;uniform sampler2D inputImageTexture;void main(){vec4 c=texture2D(inputImageTexture,floor(textureCoordinate*120.0)/120.0);float l=floor(dot(c.rgb,vec3(0.29,0.58,0.11))*3.0)/3.0;gl_FragColor=vec4(mix(vec3(0.05,0.2,0.05),vec3(0.6,0.7,0.1),l),1.0);}";
     String pol="precision lowp float;varying vec2 textureCoordinate;uniform sampler2D inputImageTexture;void main(){vec4 c=texture2D(inputImageTexture,textureCoordinate);c.r=c.r*1.2+0.1;c.b*=0.9;c.rgb-=distance(textureCoordinate,vec2(0.5))*0.4;gl_FragColor=c;}";
