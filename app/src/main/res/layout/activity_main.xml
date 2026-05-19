@@ -30,10 +30,10 @@
         android:orientation="horizontal">
         <Button
             android:id="@+id/flip"
-            android:layout_width="50dp"
+            android:layout_width="60dp"
             android:layout_height="50dp"
             android:text="FLIP"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="40dp"
             android:background="#111111"
             android:textColor="#FFFFFF" />
         <Button
